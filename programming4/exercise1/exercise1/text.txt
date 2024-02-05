@@ -1,0 +1,4 @@
+input a, b
+steps:
+    2x + -2 = 0
+    -b / a

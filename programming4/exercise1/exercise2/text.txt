@@ -1,0 +1,8 @@
+input = string value of num
+steps:
+    1- check if int value for input is smaller then 0; -> if true out= "enter a higher then 0"
+    2- variable i hold value 0
+    3- variable j hold value 1
+    4- check if num[j] is bigger then num[i]; -> if false out="False"
+    5- add 1 to i and j
+    6- return the step 4 until the end of the string

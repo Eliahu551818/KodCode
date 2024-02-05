@@ -1,0 +1,35 @@
+#!/usr/bin/expect -f
+
+set fal 1
+set fal2 00000
+set tru 1234567
+
+# Path to your Python script
+spawn python3 script.py
+# Add a short delay to allow the Python script to initialize
+sleep 1
+
+# Wait for the input prompt
+expect "Enter a number higher than 0, with multiple digits: "
+
+# Send the first input
+send "$fal2\r"
+
+# Start the loop
+while true {
+
+    # Expect different outcomes and handle accordingly
+    expect {
+        "Please use a sequence of numbers higher than 0:" {
+            # Handle the case where the input is not valid
+            send "$fal\r"
+        }
+        "Please enter a sequence not a single digit:" {
+            # Handle the case where a single digit is entered
+            send "$tru\r"
+        }
+        "Your result: True" {
+            break
+        }
+    }
+}

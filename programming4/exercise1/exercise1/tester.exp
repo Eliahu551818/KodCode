@@ -1,0 +1,14 @@
+#!/usr/bin/expect -f
+
+# spawn the question file
+
+set x 10
+set y 4
+
+spawn python3 script.py
+expect "Enter an integer for a: "
+send "$x\r"
+expect "Enter another integer for b: "
+send "$y\r"
+expect eof
+

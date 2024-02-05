@@ -1,0 +1,10 @@
+input = num
+steps:
+    1- check wheather the number is >0 and <11
+    2- set i to 1. set multiplier to 1 
+    3- set line to empty string
+    4- add to line the string of i*multiplier\t
+    5- add 1 to multiplier
+    6- do step 5 until multiplier is bigger than num
+    7- print string, and add 1 to i
+    8- do step 3 until i is bigger than num

@@ -1,0 +1,4 @@
+height= 4
+length=5
+steps:
+    print(height*length)
